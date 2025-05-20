@@ -688,16 +688,17 @@ void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
   Adafruit_NeoPixel ws2812;
   volatile int Count;
 
-  int anguloActual = 140;
-  int incremento = 3;
-  const int minAngulo = 130;
-  const int maxAngulo = 150;
-  unsigned long intervaloMovimiento = 20;
-  unsigned long tiempoAnterior = 0;
-  float objetivoX = 9.4;
-  float objetivoY = -1.1;
-  float objetivoZ = 2.1;
-  float tolerancia = 0.3;
+int anguloActual = 140;
+int incremento = 5;
+const int minAngulo = 130;
+const int maxAngulo = 150;
+unsigned long intervaloMovimiento = 20;
+unsigned long tiempoAnterior = 0;
+
+float objetivoX = 9.0;
+float objetivoY = 0.2;
+float objetivoZ = 3.3;
+float tolerancia = 0.2;
 
   void OnDataRecieved(const uint8_t * mac, const uint8_t *incomingData, int len);
   void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status);
